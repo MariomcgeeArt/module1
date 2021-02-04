@@ -37,7 +37,18 @@ def favorite_dessert(users_dessert):
 @app.route('/madlibs/<adjective>/<noun>')
 def mad_lib(adjective, noun):
     """takes and adjective and a noun returns a madlib"""
-    return f" The ships {adjective} over the head of {noun} until it crashed into the moon."
+    return f" The ships {adjective} over the head of {noun} until it crashed into the moon!"
+
+@app.route('/multiply/<number1>/<number2>')
+def multiply_numbers(number1, number2):
+    number1 = int(number1)
+    number2 = int(number2)
+
+    total = number1 * number2
+    
+    
+    return f'{number1} * {number2} equals {total}!'
+
 
 
 
